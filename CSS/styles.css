@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    font-family: "Boogaloo", sans-serif;
+    font-family: "Michroma", sans-serif;
 }
 
 .f1 {
@@ -23,7 +23,7 @@ body {
     padding: 2.0rem;
 }
 
-.f3, a, legend, label, button, .consultar-button, .ver-plantas-button {
+.f3, a, legend, label, button, .consultar-button, .ver-productos-button {
     font-size: 2.5rem;
     line-height: 2.5rem;
     padding: 1.2rem;
@@ -35,8 +35,8 @@ body {
 }
 
 main {
-    background-color: lightgreen;
-    color: darkgreen;
+    background-color: lightblue;
+    color: darkblue;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,8 +45,8 @@ main {
 header, footer {
     padding: 2.0rem;
     display: flex;
-    background-color: darkgreen;
-    color: burlywood;
+    background-color: darkblue;
+    color: lightblue;
 }
 
 header {
@@ -78,7 +78,7 @@ li {
 }
 
 a, button {
-    color: burlywood;
+    color: lightblue;
 }
 
 a:hover, button:hover {
@@ -91,7 +91,7 @@ a {
 
 button {
     font-family: "Boogaloo", sans-serif;
-    background-color: grey;
+    background-color: lightblue;
 }
 
 button:hover {
@@ -134,20 +134,20 @@ button:hover {
     align-items: center;
 }
 
-.consultar-button, .ver-plantas-button {
+.consultar-button, .ver-productos-button {
     padding: 1.2rem 2.8rem;
     text-decoration: none;
     border-radius: 3.0rem;
 }
 
 .consultar-button{
-    background: burlywood;
-    color: darkgreen;
+    background: darkblue;
+    color: lightblue;
 }
 
-.ver-plantas-button {
-    background: darkgreen;
-    color: burlywood;
+.ver-productos-button {
+    background: darkblue;
+    color: lightblue;
 }
 
 .contenedor-botones-formulario {
@@ -156,7 +156,7 @@ button:hover {
     margin-top: 1.0rem;
 }
 
-#inicio, #contacto, #plantas {
+#inicio, #contacto, #productos {
     margin-bottom: 2.0rem;
 }
 
@@ -169,13 +169,14 @@ button:hover {
     margin: 1.0rem;
     padding: 2.0rem;
     text-align: justify;
-    background-color: burlywood;
+    background-color: lightgrey;
+    color: darkblue;
     border-radius: 2.0rem;
 }
 
 form {
-    background-color: darkgreen;
-    color: burlywood;
+    background-color: darkblue;
+    color: lightblue;
     border-radius: 2.0rem;
     padding: 2.0rem;
 }
@@ -227,7 +228,7 @@ iframe {
         padding: 2.0rem;
     }
 
-    .f3, a, legend, label, button, .consultar-button, .ver-plantas-button {
+    .f3, a, legend, label, button, .consultar-button, .ver-productos-button {
         font-size: 7.0rem;
         line-height: 7.0rem;
     }

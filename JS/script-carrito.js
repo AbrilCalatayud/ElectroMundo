@@ -74,6 +74,18 @@ function aumentarCantidad(idProducto)
 
     localStorage.setItem("carrito", JSON.stringify(carrito));
 
+    actualizarCarrito(idProducto);
+}
+
+function eliminarProducto(idProducto)
+{
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    const indice = carrito.findIndex(p => p.id === idProducto);
+    carrito.splice(indice, 1);
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
     actualizarCarrito();
 }
 

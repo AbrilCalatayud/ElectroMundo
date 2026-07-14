@@ -12,7 +12,8 @@ function actualizarCarrito()
     carrito.forEach(producto => {
 
         cantidadTotalTodos += producto.cantidad;
-        precioTotalTodos += producto.cantidad * producto.price;
+        precio_total = producto.cantidad * producto.price;
+        precioTotalTodos += precio_total;
 
         const li = `
             <li class="elemento-carrito">
@@ -20,7 +21,7 @@ function actualizarCarrito()
                 <p class="f4">${producto.title}</p>
                 <p class="f4">Cant.:${producto.cantidad}</p>
                 <p class="f4"> Precio Unidad $${producto.price}</p>
-                <p class="f4"> Precio Total $${producto.precio_total}</p>
+                <p class="f4"> Precio Total $${precio_total}</p>
                 <button class="boton-sacar-carrito" onclick="sacarDelCarrito(${producto.id})">Sacar del carrito</button>
             </li>
             `;
@@ -35,6 +36,27 @@ function actualizarCarrito()
 function vaciarCarrito()
 {
     localStorage.removeItem("carrito");
+    actualizarCarrito();
+}
+
+function sacarDelCarrito(idProducto)
+{
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    const producto = carrito.find(p => p.id === idProducto);
+
+    if (producto.cantidad > 1)
+    {
+        producto.cantidad--;
+    }
+    else
+    {       
+        const indice = carrito.findIndex(p => p.id === idProducto);
+        carrito.splice(indice, 1);
+    }
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
     actualizarCarrito();
 }
 

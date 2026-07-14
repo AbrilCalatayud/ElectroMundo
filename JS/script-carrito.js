@@ -11,6 +11,7 @@ function actualizarCarrito()
             <li class="elemento-carrito">
                 <img src="${producto.image}" alt="${producto.title}">
                 <p class="f4">${producto.title}</p>
+                <p class="f4">Cant.:${producto.cantidad}</p>
                 <p class="f4"> Precio $${producto.price}</p>
                 <button class="boton-sacar-carrito" onclick="sacarDelCarrito(${producto.id})">Sacar del carrito</button>
             </li>

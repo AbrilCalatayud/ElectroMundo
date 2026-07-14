@@ -37,11 +37,20 @@ function agregarAlCarrito(idProducto)
 
     var carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-    carrito.push(producto);
+    const existente = carrito.find(p => p.id === idProducto); //me fijo si está en el carrito
+
+    if (existente != undefined) 
+    {
+        existente.cantidad++;
+    } else
+    {
+        carrito.push({
+            ...producto, //copio los datos del producto, pero sin modificar el original. Los "..." se llaman spread operator
+            cantidad: 1 //le sumo la cantidad
+        });
+    }
 
     localStorage.setItem("carrito", JSON.stringify(carrito));
-
-    let usuario = localStorage.getItem('carrito');
 }
 
 traerProductos();

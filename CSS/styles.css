@@ -160,12 +160,12 @@ button:hover, #vaciar-carrito:hover{
     margin-bottom: 2.0rem;
 }
 
-.contenedor-grid {
+#contenedor-resenias {
     display: grid;
-    grid-template-columns: 40.0rem 40.0rem 40.0rem;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
-.resenia {
+.resenia-card {
     margin: 1.0rem;
     padding: 2.0rem;
     text-align: justify;
@@ -243,7 +243,7 @@ iframe {
        font-size: 3px; /* Una sola columna en pantallas pequeñas */
    }
 
-   .contenedor-grid {
+   #contenedor-resenias {
         grid-template-columns: 130.0rem;
     }
 

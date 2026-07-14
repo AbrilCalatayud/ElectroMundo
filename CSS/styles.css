@@ -224,7 +224,7 @@ iframe {
 
 #lista-carrito {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     margin-bottom: 2.0rem;
 }
 

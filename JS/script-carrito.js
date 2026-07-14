@@ -52,7 +52,7 @@ function sacarDelCarrito(idProducto)
     else
     {       
         const indice = carrito.findIndex(p => p.id === idProducto);
-        carrito.splice(indice, 1);
+        carrito.splice(indice, 1); //saca un elemento del array carrito a partir del índice
     }
 
     localStorage.setItem("carrito", JSON.stringify(carrito));

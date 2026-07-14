@@ -23,7 +23,7 @@ function actualizarCarrito()
                 <p class="f4"> Precio Total $${precio_total}</p>
                 <div class="contendor-cantidad">
                     <button onclick="disminuirCantidad(${producto.id})"> - </button>
-                    <span class="f4">${producto.cantidad}</span>
+                    <p class="f4">${producto.cantidad}</p>
                     <button onclick="aumentarCantidad(${producto.id})"> + </button>
                     <button onclick="eliminarProducto(${producto.id})">Eliminar</button>
                 </div>
@@ -43,7 +43,7 @@ function vaciarCarrito()
     actualizarCarrito();
 }
 
-function sacarDelCarrito(idProducto)
+function disminuirCantidad(idProducto)
 {
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
@@ -58,6 +58,19 @@ function sacarDelCarrito(idProducto)
         const indice = carrito.findIndex(p => p.id === idProducto);
         carrito.splice(indice, 1); //saca un elemento del array carrito a partir del índice
     }
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
+    actualizarCarrito();
+}
+
+function aumentarCantidad(idProducto) 
+{
+    var carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    const producto = carrito.find(p => p.id === idProducto);
+
+    producto.cantidad++;
 
     localStorage.setItem("carrito", JSON.stringify(carrito));
 

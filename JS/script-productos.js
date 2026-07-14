@@ -42,7 +42,6 @@ function agregarAlCarrito(idProducto)
     if (existente != undefined) 
     {
         existente.cantidad++;
-        existente.precio_total += existente.price;
     } else
     {
         carrito.push({

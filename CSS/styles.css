@@ -82,7 +82,7 @@ a {
     color: lightblue;
 }
 
-a:hover, button:hover, #vaciar-carrito:hover {
+a:hover, button:hover {
     color: coral;
 }
 

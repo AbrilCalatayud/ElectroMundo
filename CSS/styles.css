@@ -108,30 +108,29 @@ button:hover {
     height: 50px;
 }
 
-.contenedor-productos {
+#contenedor-productos {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .card-producto {
+    width: 30.0rem; 
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 2.0rem;
 }
 
-.imagen-producto {
-    width: 40.0rem;
-    height: 40.0rem;
-    border-radius: 3.0rem;
+.card-producto img {
+    width: 20.0rem;
+    object-fit: contain;
 }
 
-.info-producto {
-    margin: 0.3rem 0rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.card-producto p {
+    width: 100%;
+    margin: 2.0rem;
 }
 
 .consultar-button, .ver-productos-button {
@@ -208,9 +207,12 @@ iframe {
     padding: 2.0rem;
 }
 
-#vaciar-carrito {
+#vaciar-carrito, .boton-agregar {
     color: lightblue;
     background-color: darkblue;
+}
+
+#vaciar-carrito {
     margin: 2.0rem;
 }
 

@@ -106,7 +106,6 @@ button:hover {
 
 .imagen-icono {
     height: 50px;
-    
 }
 
 .contenedor-productos {
@@ -207,6 +206,16 @@ iframe {
     width: 50.0rem;
     height: 30.0rem;
     padding: 2.0rem;
+}
+
+#vaciar-carrito {
+    color: lightblue;
+    background-color: darkblue;
+    margin: 2.0rem;
+}
+
+.contenedor-carrito {
+    display: flex;
 }
 
 @media only screen and (max-width: 600px) {

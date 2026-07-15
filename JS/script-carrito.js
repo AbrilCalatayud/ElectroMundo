@@ -40,7 +40,10 @@ function actualizarCarrito()
 function vaciarCarrito()
 {
     localStorage.removeItem("carrito");
+
     actualizarCarrito();
+
+    mostrarTotalProductosHeader();
 }
 
 function disminuirCantidad(idProducto)
@@ -62,6 +65,8 @@ function disminuirCantidad(idProducto)
     localStorage.setItem("carrito", JSON.stringify(carrito));
 
     actualizarCarrito();
+
+    mostrarTotalProductosHeader();
 }
 
 function aumentarCantidad(idProducto) 
@@ -75,6 +80,8 @@ function aumentarCantidad(idProducto)
     localStorage.setItem("carrito", JSON.stringify(carrito));
 
     actualizarCarrito(idProducto);
+
+    mostrarTotalProductosHeader();
 }
 
 function eliminarProducto(idProducto)
@@ -87,6 +94,8 @@ function eliminarProducto(idProducto)
     localStorage.setItem("carrito", JSON.stringify(carrito));
 
     actualizarCarrito();
+
+    mostrarTotalProductosHeader();
 }
 
 actualizarCarrito();

@@ -54,6 +54,8 @@ function agregarAlCarrito(idProducto)
     }
 
     localStorage.setItem("carrito", JSON.stringify(carrito));
+
+    mostrarTotalProductosHeader();
 }
 
 traerProductos();

@@ -1,7 +1,7 @@
 # Mi Viverito
 
 ## Descripción
-Página para un emprendimiento de venta de plantas para el hogar.
+Página para UN e-commerce de productos electrónicos.
 
 ## Comienzos
 Esta página comenzó como proyecto para el curso de Front - End JS de Talento Tech.
@@ -9,4 +9,7 @@ Esta página comenzó como proyecto para el curso de Front - End JS de Talento T
 ## Lenguajes
 - HTML
 - CSS
-- Javascript (Próximamente)
+- JavaScript
+
+##APIs
+- Fake Store API
